@@ -220,28 +220,26 @@ const Navbar = () => {
 
             <div className="flex items-center gap-2">
               <a
-                href="#"
+                href="https://www.facebook.com/people/Vighnaharta-Hospital/100068361038270/"
                 aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#55B8E9]"
               >
                 <FaFacebookF size={12} />
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/_vighnaharta_hospital_/"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#55B8E9]"
               >
                 <FaInstagram size={13} />
               </a>
 
-              <a
-                href="#"
-                aria-label="YouTube"
-                className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#55B8E9]"
-              >
-                <FaYoutube size={13} />
-              </a>
+            
             </div>
 
           </div>

@@ -183,22 +183,22 @@ const Footer = () => {
 
               <div className="mt-4 flex items-center gap-2 sm:mt-5 sm:gap-2.5 xl:mt-6">
                 <SocialIcon
-                  href="#"
+                  href="https://www.facebook.com/people/Vighnaharta-Hospital/100068361038270/"
                   label="Facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   icon={<FaFacebookF size={13} />}
                 />
 
                 <SocialIcon
-                  href="#"
+                  href="https://www.instagram.com/_vighnaharta_hospital_/"
                   label="Instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   icon={<FaInstagram size={14} />}
                 />
 
-                <SocialIcon
-                  href="#"
-                  label="YouTube"
-                  icon={<FaYoutube size={14} />}
-                />
+                
               </div>
             </div>
 

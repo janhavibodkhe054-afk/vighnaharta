@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-
 import {
   Phone,
   MapPin,
@@ -9,7 +8,6 @@ import {
   ArrowRight,
   ChevronDown,
 } from "lucide-react";
-
 import {
   FaFacebookF,
   FaInstagram,
@@ -23,7 +21,7 @@ import {
 const mainLinks = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
-  { name: "Doctor Details", path: "/doctor" },
+  // { name: "Doctor Details", path: "/doctor" },
 ];
 
 const afterServiceLinks = [
@@ -32,7 +30,40 @@ const afterServiceLinks = [
   { name: "Contact", path: "/contact" },
 ];
 
+/* =========================================================
+   SERVICES — NEW SERVICES FIRST
+========================================================= */
+
 const serviceLinks = [
+  // NEW SERVICES
+
+  {
+    name: "Cardiac Diagnostic Services",
+    path: "/services/cardiac-diagnostic-services",
+  },
+  {
+    name: "Oncology Treatment",
+    path: "/services/oncology-treatment",
+  },
+  {
+    name: "Preventive Cardiology",
+    path: "/services/preventive-cardiology",
+  },
+  {
+    name: "Emergency Cardiac Services",
+    path: "/services/emergency-cardiac-services",
+  },
+  {
+    name: "Neurospine Care",
+    path: "/services/neurospine-care",
+  },
+  {
+    name: "Dermatology Services",
+    path: "/services/dermatology-services",
+  },
+
+  // EXISTING SERVICES
+
   {
     name: "Orthopedics & Trauma Care",
     path: "/services/orthopedics-trauma",
@@ -54,11 +85,9 @@ const serviceLinks = [
     path: "/services/urology",
   },
   {
-    name: "Gynecology & Women’s Health",
+    name: "Gynecology & Women's Health",
     path: "/services/gynecology",
   },
-
-  /* NEW EECP SERVICE */
   {
     name: "EECP Treatment",
     path: "/services/eecp-treatment",
@@ -92,8 +121,7 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] =
-    useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   const location = useLocation();
   const servicesRef = useRef(null);
@@ -102,9 +130,7 @@ const Navbar = () => {
     location.pathname === "/services" ||
     location.pathname.startsWith("/services/");
 
-  /* =======================================================
-     CLOSE MENUS ON ROUTE CHANGE
-  ======================================================= */
+  /* CLOSE MENUS ON ROUTE CHANGE */
 
   useEffect(() => {
     setMobileOpen(false);
@@ -112,9 +138,7 @@ const Navbar = () => {
     setMobileServicesOpen(false);
   }, [location.pathname]);
 
-  /* =======================================================
-     MOBILE BODY LOCK
-  ======================================================= */
+  /* MOBILE BODY LOCK */
 
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
@@ -124,9 +148,7 @@ const Navbar = () => {
     };
   }, [mobileOpen]);
 
-  /* =======================================================
-     OUTSIDE CLICK
-  ======================================================= */
+  /* OUTSIDE CLICK */
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -151,15 +173,16 @@ const Navbar = () => {
   return (
     <>
       <header className="sticky top-0 z-[100] w-full bg-white font-sans">
-        {/* =================================================
+
+        {/* =====================================================
             TOP BAR
-        ================================================== */}
+        ====================================================== */}
 
         <div className="hidden bg-[#102D5F] text-white md:block">
           <div className="mx-auto flex min-h-[42px] max-w-[1380px] items-center justify-between px-6 lg:px-8">
-            {/* LEFT */}
 
             <div className="flex items-center gap-5 lg:gap-8">
+
               <a
                 href="tel:+919766999474"
                 className="group flex items-center gap-2 text-[13px] font-medium leading-[1.7] transition sm:text-[15px]"
@@ -190,15 +213,14 @@ const Navbar = () => {
 
                 <span>Alephata, Junnar, Pune</span>
               </div>
+
             </div>
 
-            {/* SOCIAL */}
+            {/* SOCIAL ICONS */}
 
             <div className="flex items-center gap-2">
               <a
                 href="#"
-                target="_blank"
-                rel="noreferrer"
                 aria-label="Facebook"
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#55B8E9]"
               >
@@ -207,8 +229,6 @@ const Navbar = () => {
 
               <a
                 href="#"
-                target="_blank"
-                rel="noreferrer"
                 aria-label="Instagram"
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#55B8E9]"
               >
@@ -217,23 +237,23 @@ const Navbar = () => {
 
               <a
                 href="#"
-                target="_blank"
-                rel="noreferrer"
                 aria-label="YouTube"
                 className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-white transition-all duration-300 hover:-translate-y-[2px] hover:bg-[#55B8E9]"
               >
                 <FaYoutube size={13} />
               </a>
             </div>
+
           </div>
         </div>
 
-        {/* =================================================
+        {/* =====================================================
             MAIN NAVBAR
-        ================================================== */}
+        ====================================================== */}
 
         <nav className="border-b border-slate-100 bg-white shadow-[0_6px_25px_rgba(15,45,95,0.06)]">
           <div className="mx-auto flex h-[68px] max-w-[1380px] items-center justify-between px-3 min-[360px]:px-4 sm:h-[76px] sm:px-6 lg:h-[86px] lg:px-8 xl:h-[90px]">
+
             {/* LOGO */}
 
             <NavLink
@@ -264,6 +284,7 @@ const Navbar = () => {
 
             <div className="hidden items-center xl:flex">
               <div className="flex items-center gap-[21px] 2xl:gap-[27px]">
+
                 {mainLinks.map((item) => (
                   <DesktopLink
                     key={item.name}
@@ -272,7 +293,7 @@ const Navbar = () => {
                 ))}
 
                 {/* =============================================
-                    SERVICES
+                    SERVICES DROPDOWN
                 ============================================== */}
 
                 <div
@@ -282,12 +303,14 @@ const Navbar = () => {
                   onMouseLeave={() => setServicesOpen(false)}
                 >
                   <div className="flex h-[90px] items-center">
+
                     <button
                       type="button"
                       onClick={() =>
                         setServicesOpen((prev) => !prev)
                       }
                       aria-expanded={servicesOpen}
+                      aria-haspopup="true"
                       className={`group relative flex h-full items-center gap-1.5 text-[13px] font-semibold leading-[1.7] transition-colors duration-300 sm:text-[15px] ${
                         servicesActive || servicesOpen
                           ? "text-[#2E91C8]"
@@ -312,20 +335,20 @@ const Navbar = () => {
                         }`}
                       />
                     </button>
+
                   </div>
 
-                  {/* ===========================================
-                      SERVICES DROPDOWN
-                  ============================================ */}
+                  {/* DROPDOWN PANEL */}
 
                   <div
-                    className={`absolute left-1/2 top-[calc(100%-7px)] w-[380px] -translate-x-1/2 pt-3 transition-all duration-200 ${
+                    className={`absolute left-1/2 top-[calc(100%-7px)] w-[390px] -translate-x-1/2 pt-3 transition-all duration-200 ${
                       servicesOpen
                         ? "visible translate-y-0 opacity-100"
                         : "invisible -translate-y-2 opacity-0"
                     }`}
                   >
                     <div className="overflow-hidden rounded-[16px] border border-slate-100 bg-white shadow-[0_18px_50px_rgba(15,45,95,0.13)]">
+
                       {/* HEADER */}
 
                       <div className="border-b border-slate-100 px-5 py-3.5">
@@ -338,15 +361,16 @@ const Navbar = () => {
                         </span>
                       </div>
 
-                      {/* DEPARTMENTS */}
+                      {/* ALL SERVICES — SCROLLABLE */}
 
-                      <div className="py-1.5">
+                      <div className="max-h-[min(58vh,490px)] overflow-y-auto overscroll-contain py-1.5 [scrollbar-color:#B9DDEA_#F8FCFE] [scrollbar-width:thin]">
+
                         {serviceLinks.map((service) => (
                           <NavLink
                             key={service.name}
                             to={service.path}
                             className={({ isActive }) =>
-                              `group relative flex min-h-[40px] items-center justify-between px-5 text-[13px] font-semibold leading-[1.7] transition-all duration-200 sm:text-[15px] ${
+                              `group relative flex min-h-[42px] items-center justify-between px-5 py-2 text-[13px] font-semibold leading-[1.7] transition-all duration-200 sm:text-[15px] ${
                                 isActive
                                   ? "bg-[#F1F9FD] text-[#2E91C8]"
                                   : "text-[#334155] hover:bg-[#F7FBFD] hover:text-[#2E91C8]"
@@ -356,6 +380,7 @@ const Navbar = () => {
                             {({ isActive }) => (
                               <>
                                 <div className="flex min-w-0 items-center gap-3">
+
                                   <span
                                     className={`h-[5px] w-[5px] shrink-0 rounded-full transition-colors duration-200 ${
                                       isActive
@@ -380,21 +405,18 @@ const Navbar = () => {
                             )}
                           </NavLink>
                         ))}
+
                       </div>
-
-                      {/* DIVIDER */}
-
-                      <div className="mx-5 h-px bg-slate-100" />
 
                       {/* TREATMENTS */}
 
-                      <div className="py-1.5">
+                      <div className="border-t border-slate-100 py-1.5">
                         {extraServiceLinks.map((item) => (
                           <NavLink
                             key={item.name}
                             to={item.path}
                             className={({ isActive }) =>
-                              `group relative flex min-h-[40px] items-center justify-between px-5 text-[13px] font-semibold leading-[1.7] transition-all duration-200 sm:text-[15px] ${
+                              `group relative flex min-h-[42px] items-center justify-between px-5 text-[13px] font-semibold leading-[1.7] transition-all duration-200 sm:text-[15px] ${
                                 isActive
                                   ? "bg-[#F1F9FD] text-[#2E91C8]"
                                   : "text-[#334155] hover:bg-[#F7FBFD] hover:text-[#2E91C8]"
@@ -428,6 +450,7 @@ const Navbar = () => {
                           />
                         </NavLink>
                       </div>
+
                     </div>
                   </div>
                 </div>
@@ -440,6 +463,7 @@ const Navbar = () => {
                     item={item}
                   />
                 ))}
+
               </div>
 
               {/* DIVIDER */}
@@ -454,10 +478,7 @@ const Navbar = () => {
                 title="24x7 Emergency Call"
                 className="mr-3 flex h-[45px] w-[45px] shrink-0 items-center justify-center rounded-full border border-slate-200 text-[#102D5F] transition-all duration-300 hover:-translate-y-[2px] hover:border-[#102D5F] hover:bg-[#102D5F] hover:text-white"
               >
-                <Phone
-                  size={17}
-                  strokeWidth={2}
-                />
+                <Phone size={17} strokeWidth={2} />
               </a>
 
               {/* WHATSAPP APPOINTMENT */}
@@ -477,6 +498,7 @@ const Navbar = () => {
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 />
               </a>
+
             </div>
 
             {/* =================================================
@@ -484,22 +506,18 @@ const Navbar = () => {
             ================================================== */}
 
             <div className="flex shrink-0 items-center gap-2 xl:hidden">
+
               <a
                 href="tel:+919766999474"
                 aria-label="Emergency Call"
                 className="hidden h-[42px] w-[42px] items-center justify-center rounded-full bg-[#EEF8FD] text-[#2E91C8] transition-all duration-300 hover:bg-[#102D5F] hover:text-white sm:flex"
               >
-                <Phone
-                  size={17}
-                  strokeWidth={2}
-                />
+                <Phone size={17} strokeWidth={2} />
               </a>
 
               <button
                 type="button"
-                onClick={() =>
-                  setMobileOpen((prev) => !prev)
-                }
+                onClick={() => setMobileOpen((prev) => !prev)}
                 aria-label={
                   mobileOpen
                     ? "Close Navigation"
@@ -509,24 +527,20 @@ const Navbar = () => {
                 className="flex h-[43px] w-[43px] items-center justify-center rounded-[11px] border border-slate-200 bg-white text-[#102D5F] transition-all duration-300 hover:border-[#2E91C8] hover:text-[#2E91C8] sm:h-[44px] sm:w-[44px]"
               >
                 {mobileOpen ? (
-                  <X
-                    size={22}
-                    strokeWidth={2}
-                  />
+                  <X size={22} strokeWidth={2} />
                 ) : (
-                  <Menu
-                    size={23}
-                    strokeWidth={2}
-                  />
+                  <Menu size={23} strokeWidth={2} />
                 )}
               </button>
+
             </div>
+
           </div>
         </nav>
 
-        {/* =================================================
+        {/* =====================================================
             MOBILE / TABLET MENU
-        ================================================== */}
+        ====================================================== */}
 
         <div
           className={`absolute left-0 top-full z-[101] w-full border-t border-slate-100 bg-white shadow-[0_20px_40px_rgba(15,45,95,0.12)] transition-all duration-300 xl:hidden ${
@@ -536,7 +550,9 @@ const Navbar = () => {
           }`}
         >
           <div className="mx-auto max-h-[calc(100vh-68px)] max-w-[1380px] overflow-y-auto overscroll-contain px-3 py-3 min-[360px]:px-4 sm:max-h-[calc(100vh-118px)] sm:px-6 sm:py-4">
+
             <div className="flex flex-col">
+
               {/* MAIN LINKS */}
 
               {mainLinks.map((item) => (
@@ -546,16 +562,15 @@ const Navbar = () => {
                 />
               ))}
 
-              {/* ===========================================
+              {/* =============================================
                   MOBILE SERVICES
-              ============================================ */}
+              ============================================== */}
 
               <div className="border-b border-slate-100">
+
                 <div
                   className={`relative flex min-h-[48px] items-center rounded-lg transition-all duration-300 ${
-                    servicesActive
-                      ? "bg-[#F1F9FD]"
-                      : ""
+                    servicesActive ? "bg-[#F1F9FD]" : ""
                   }`}
                 >
                   {servicesActive && (
@@ -576,9 +591,7 @@ const Navbar = () => {
                   <button
                     type="button"
                     onClick={() =>
-                      setMobileServicesOpen(
-                        (prev) => !prev
-                      )
+                      setMobileServicesOpen((prev) => !prev)
                     }
                     aria-label="Toggle Services Menu"
                     aria-expanded={mobileServicesOpen}
@@ -588,15 +601,14 @@ const Navbar = () => {
                       size={18}
                       strokeWidth={2}
                       className={`transition-transform duration-300 ${
-                        mobileServicesOpen
-                          ? "rotate-180"
-                          : ""
+                        mobileServicesOpen ? "rotate-180" : ""
                       }`}
                     />
                   </button>
+
                 </div>
 
-                {/* ACCORDION */}
+                {/* SERVICES ACCORDION */}
 
                 <div
                   className={`grid transition-all duration-300 ease-in-out ${
@@ -606,14 +618,16 @@ const Navbar = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
+
                     <div className="mb-3 ml-3 border-l border-[#DCECF4] pl-2 min-[360px]:ml-4 min-[360px]:pl-3">
+
                       <div className="pb-1 pt-2">
                         <span className="px-3 text-[13px] font-bold uppercase leading-[1.7] tracking-[1px] text-[#94A3B8] sm:text-[15px]">
                           Departments
                         </span>
                       </div>
 
-                      {/* ALL SERVICES INCLUDING EECP */}
+                      {/* ALL 13 SERVICES */}
 
                       {serviceLinks.map((service) => (
                         <NavLink
@@ -643,6 +657,8 @@ const Navbar = () => {
                         </NavLink>
                       ))}
 
+                      {/* TREATMENTS */}
+
                       <div className="my-2 h-px bg-slate-100" />
 
                       {extraServiceLinks.map((item) => (
@@ -659,12 +675,11 @@ const Navbar = () => {
                         >
                           <span>{item.name}</span>
 
-                          <ArrowRight
-                            size={13}
-                            strokeWidth={2}
-                          />
+                          <ArrowRight size={13} strokeWidth={2} />
                         </NavLink>
                       ))}
+
+                      {/* VIEW ALL */}
 
                       <NavLink
                         to="/services"
@@ -672,14 +687,13 @@ const Navbar = () => {
                       >
                         <span>View All Services</span>
 
-                        <ArrowRight
-                          size={13}
-                          strokeWidth={2}
-                        />
+                        <ArrowRight size={13} strokeWidth={2} />
                       </NavLink>
+
                     </div>
                   </div>
                 </div>
+
               </div>
 
               {/* AFTER SERVICES */}
@@ -690,17 +704,18 @@ const Navbar = () => {
                   item={item}
                 />
               ))}
+
             </div>
 
-            {/* EMERGENCY */}
+            {/* =================================================
+                EMERGENCY
+            ================================================== */}
 
             <div className="mt-4 rounded-[16px] border border-[#E7F1F7] bg-[#F5F9FC] p-3.5">
               <div className="flex items-center gap-3">
+
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#102D5F] text-white">
-                  <Phone
-                    size={16}
-                    strokeWidth={2}
-                  />
+                  <Phone size={16} strokeWidth={2} />
                 </div>
 
                 <div>
@@ -715,6 +730,7 @@ const Navbar = () => {
                     +91 9766999474
                   </a>
                 </div>
+
               </div>
             </div>
 
@@ -747,13 +763,15 @@ const Navbar = () => {
 
               <span>Alephata, Junnar, Pune</span>
             </div>
+
           </div>
         </div>
+
       </header>
 
-      {/* ===================================================
+      {/* =====================================================
           MOBILE BACKDROP
-      ==================================================== */}
+      ====================================================== */}
 
       {mobileOpen && (
         <button

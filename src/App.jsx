@@ -22,6 +22,12 @@ import Gynecologist from "./pages/Gynecologist";
 import Tratment from "./pages/Tratment";
 import Diagnostic from "./pages/Diagnostic";
 import Eecp from "./pages/Eecp";
+import Oncology from "./pages/Oncology";
+import PreventiveCardiology from "./pages/PreventiveCardiology";
+import CardiacDiagnostic from "./pages/CardiacDiagnostic";
+import EmergencyCardiac from "./pages/EmergencyCardiac";
+import Neurospine from "./pages/Neurospine";
+import Dermatology from "./pages/Dermatology";
 
 export default function App() {
   return (
@@ -46,6 +52,12 @@ export default function App() {
         <Route path="/services/gynecology" element={<Gynecologist />} />
         <Route path="/services/treatments" element={<Tratment />} />
         <Route path="/services/eecp-treatment" element={<Eecp />} />
+        <Route path="/services/oncology-treatment" element={<Oncology />} />
+        <Route path="/services/preventive-cardiology" element={<PreventiveCardiology />} />
+        <Route path="/services/cardiac-diagnostic-services" element={<CardiacDiagnostic />} />
+        <Route path="/services/emergency-cardiac-services" element={<EmergencyCardiac />} />
+        <Route path="/services/neurospine-care" element={<Neurospine />} />
+        <Route path="/services/dermatology-services" element={<Dermatology />} />
         {/* <Route path="/services/diagnostics" element={<Diagnostic/>} /> */}
       </Routes>
 

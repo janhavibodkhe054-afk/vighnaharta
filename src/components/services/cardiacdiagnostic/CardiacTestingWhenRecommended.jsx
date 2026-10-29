@@ -211,7 +211,7 @@ const CardiacTestingWhenRecommended = () => {
             </div>
 
             <a
-              href="tel:+919766999474"
+              href="tel:+917757004175"
               className="inline-flex min-h-[48px] shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-[#C93542] px-5 py-3 text-[13px] font-bold text-white transition-all duration-300 hover:bg-[#A82936] sm:self-auto sm:text-[14px]"
             >
               <PhoneCall size={18} strokeWidth={1.8} />

@@ -27,15 +27,19 @@ const leaders = [
     bio: "Dr. Nagesh Hingmire provides patient-focused medical consultation, clinical assessment and appropriate treatment guidance.",
     image: "/nagesh.png",
   },
-  {
-    name: "Dr. Deepali Hingmire",
-    designation: "Medical Practitioner",
-    qualification: "B.A.M.S., CSD, CVD, I.C.U.",
-    location: "Pune, Maharashtra",
-    association: "Associated with Mutation Dermacare",
-    bio: "Dr. Deepali Hingmire is a medical practitioner associated with Mutation Dermacare, providing healthcare consultation and guidance.",
-    image: "/deepali.webp",
-  },
+  
+{
+  name: "Dr. Deepali Hingmire",
+  designation: "Medical Practitioner",
+  qualification: "B.A.M.S.",
+  location: "Pune, Maharashtra",
+  association:
+    "Mutation Dermacare — A Cosmetic Brand Built by a Doctor",
+  bio:
+    "Dr. Deepali Hingmire is a medical practitioner associated with Mutation Dermacare — A Cosmetic Brand Built by a Doctor, providing healthcare consultation and guidance.",
+  image: "/deepali.webp",
+},
+
 ];
 
 /* ==========================================
@@ -96,8 +100,7 @@ const LeadershipSection = () => {
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
-          backgroundImage:
-            "radial-gradient(#69CBF2 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(#69CBF2 1px, transparent 1px)",
           backgroundSize: "26px 26px",
         }}
       />
@@ -130,27 +133,20 @@ const LeadershipSection = () => {
           {/* HEADING */}
 
           <h2 className="m-0 text-[32px] font-bold leading-[1.2] tracking-[-0.8px] text-white sm:text-[38px] lg:text-[46px]">
-            The People Behind{" "}
-            <span className="text-[#69CBF2]">
-              Our Care
-            </span>
+            The People Behind <span className="text-[#69CBF2]">Our Care</span>
           </h2>
 
           {/* DESCRIPTION */}
 
           <p className="mx-auto mt-4 max-w-[640px] text-[14px] leading-[1.8] text-white/65 sm:text-[16px]">
-            Meet the medical professionals supporting
-            patient consultation, responsible clinical
-            assessment and compassionate healthcare.
+            Meet the medical professionals supporting patient consultation,
+            responsible clinical assessment and compassionate healthcare.
           </p>
 
           <div className="mt-6 flex items-center justify-center gap-3">
             <span className="h-px w-10 bg-white/15" />
 
-            <HeartPulse
-              size={19}
-              className="text-[#69CBF2]"
-            />
+            <HeartPulse size={19} className="text-[#69CBF2]" />
 
             <span className="h-px w-10 bg-white/15" />
           </div>
@@ -163,6 +159,7 @@ const LeadershipSection = () => {
         <div className="mx-auto max-w-[1240px] space-y-16 sm:space-y-20 lg:space-y-24">
           {leaders.map((doctor, index) => {
             const reverse = index % 2 !== 0;
+            const isNagesh = index === 0;
 
             return (
               <article key={doctor.name} className="relative">
@@ -203,7 +200,13 @@ const LeadershipSection = () => {
 
                     {/* IMAGE CONTAINER */}
 
-                    <div className="group relative h-[390px] overflow-hidden rounded-[26px] border border-white/10 bg-gradient-to-b from-[#183B60] to-[#0B2747] shadow-[0_30px_70px_rgba(0,0,0,0.28)] sm:h-[480px] lg:h-[540px] xl:h-[570px]">
+                    <div
+                      className={`group relative h-[390px] overflow-hidden rounded-[26px] border shadow-[0_30px_70px_rgba(0,0,0,0.28)] sm:h-[480px] lg:h-[540px] xl:h-[570px] ${
+                        isNagesh
+                          ? "border-[#DCEEF7] bg-gradient-to-b from-[#FFFFFF] via-[#F0FAFF] to-[#D9F1FC]"
+                          : "border-white/10 bg-gradient-to-b from-[#183B60] to-[#0B2747]"
+                      }`}
+                    >
                       <img
                         src={doctor.image}
                         alt={doctor.name}
@@ -211,35 +214,63 @@ const LeadershipSection = () => {
                         className="h-full w-full object-contain object-bottom transition-transform duration-700 group-hover:scale-[1.035]"
                       />
 
-                      {/* IMAGE GRADIENT */}
+                      {/* DARK GRADIENT ONLY FOR DEEPALI */}
 
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#04152C]/75 via-transparent to-transparent" />
+                      {!isNagesh && (
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#04152C]/75 via-transparent to-transparent" />
+                      )}
 
                       {/* DOCTOR NUMBER */}
 
-                      <div className="absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-[#06182F]/50 text-[14px] font-bold text-[#69CBF2] backdrop-blur-md">
+                      <div
+                        className={`absolute left-5 top-5 flex h-10 w-10 items-center justify-center rounded-full border text-[14px] font-bold backdrop-blur-md ${
+                          isNagesh
+                            ? "border-[#DCE8F0] bg-[#F1F8FC] text-[#102D5F]"
+                            : "border-white/20 bg-[#06182F]/50 text-[#69CBF2]"
+                        }`}
+                      >
                         0{index + 1}
                       </div>
 
                       {/* BOTTOM IMAGE INFO */}
 
                       <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-7">
-                        <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 backdrop-blur-md">
+                        <div
+                          className={`mb-3 inline-flex items-center gap-2 rounded-full border px-3 py-1.5 backdrop-blur-md ${
+                            isNagesh
+                              ? "border-[#DCE8F0] bg-white/90"
+                              : "border-white/15 bg-white/10"
+                          }`}
+                        >
                           <BadgeCheck
                             size={16}
-                            className="text-[#69CBF2]"
+                            className={
+                              isNagesh ? "text-[#2E91C8]" : "text-[#69CBF2]"
+                            }
                           />
 
-                          <span className="text-[11px] font-bold uppercase tracking-[1px] text-white/90 sm:text-[12px]">
+                          <span
+                            className={`text-[11px] font-bold uppercase tracking-[1px] sm:text-[12px] ${
+                              isNagesh ? "text-[#102D5F]" : "text-white/90"
+                            }`}
+                          >
                             Medical Leadership
                           </span>
                         </div>
 
-                        <h3 className="m-0 text-[23px] font-bold text-white sm:text-[27px]">
+                        <h3
+                          className={`m-0 text-[23px] font-bold sm:text-[27px] ${
+                            isNagesh ? "text-[#102D5F]" : "text-white"
+                          }`}
+                        >
                           {doctor.name}
                         </h3>
 
-                        <p className="m-0 mt-1 text-[13px] font-medium text-[#8DDCF8] sm:text-[15px]">
+                        <p
+                          className={`m-0 mt-1 text-[13px] font-medium sm:text-[15px] ${
+                            isNagesh ? "text-[#2E91C8]" : "text-[#8DDCF8]"
+                          }`}
+                        >
                           {doctor.designation}
                         </p>
                       </div>
@@ -252,10 +283,7 @@ const LeadershipSection = () => {
                         reverse ? "-left-5" : "-right-5"
                       }`}
                     >
-                      <Stethoscope
-                        size={28}
-                        strokeWidth={1.7}
-                      />
+                      <Stethoscope size={28} strokeWidth={1.7} />
                     </div>
                   </div>
 
@@ -319,10 +347,7 @@ const LeadershipSection = () => {
                       <Credential
                         icon={ShieldCheck}
                         label="Professional Association"
-                        value={
-                          doctor.association ||
-                          "Vighnaharta Hospital"
-                        }
+                        value={doctor.association || "Vighnaharta Hospital"}
                       />
                     </div>
 
@@ -332,10 +357,7 @@ const LeadershipSection = () => {
                       <span className="absolute bottom-0 left-0 top-0 w-[3px] bg-gradient-to-b from-[#69CBF2] via-[#2E91C8] to-transparent" />
 
                       <div className="mb-3 flex items-center gap-2">
-                        <Award
-                          size={18}
-                          className="text-[#69CBF2]"
-                        />
+                        <Award size={18} className="text-[#69CBF2]" />
 
                         <span className="text-[12px] font-bold uppercase tracking-[1.2px] text-[#69CBF2] sm:text-[13px]">
                           Professional Bio
@@ -351,10 +373,7 @@ const LeadershipSection = () => {
 
                     <div className="mt-6 flex items-center gap-3">
                       <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#55B8E9]/20 bg-[#2E91C8]/15 text-[#69CBF2]">
-                        <HeartPulse
-                          size={21}
-                          strokeWidth={1.7}
-                        />
+                        <HeartPulse size={21} strokeWidth={1.7} />
                       </div>
 
                       <div>
@@ -377,10 +396,7 @@ const LeadershipSection = () => {
                     <span className="h-px flex-1 bg-gradient-to-r from-transparent via-white/15 to-[#2E91C8]/25" />
 
                     <div className="mx-4 flex h-10 w-10 items-center justify-center rounded-full border border-[#2E91C8]/25 bg-[#09213E] text-[#55B8E9]">
-                      <Sparkles
-                        size={18}
-                        strokeWidth={1.6}
-                      />
+                      <Sparkles size={18} strokeWidth={1.6} />
                     </div>
 
                     <span className="h-px flex-1 bg-gradient-to-l from-transparent via-white/15 to-[#2E91C8]/25" />

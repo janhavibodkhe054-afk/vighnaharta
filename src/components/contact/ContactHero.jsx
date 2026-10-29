@@ -126,7 +126,7 @@ const ContactHero = () => {
           {/* CALL */}
 
           <a
-            href="tel:+919766999474"
+            href="tel:+917757004175"
             className="flex min-h-[68px] items-center gap-2.5 pr-2 min-[360px]:gap-3 sm:min-h-[74px] sm:pr-4"
           >
             <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#2E91C8]/15 text-[#69CBF2] sm:h-10 sm:w-10">
@@ -142,7 +142,7 @@ const ContactHero = () => {
               </span>
 
               <span className="mt-0.5 block whitespace-nowrap text-[13px] font-semibold leading-[1.5] text-white/85 sm:text-[15px]">
-                +91 9766999474
+                +91 7757004175
               </span>
             </div>
           </a>

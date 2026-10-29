@@ -69,7 +69,7 @@ const PharmacyFacility = () => {
               <div className="pharmacy-image-wrap group relative h-[260px] w-full overflow-hidden rounded-[20px] bg-[#DCEAF0] shadow-[0_20px_55px_rgba(16,45,95,.14)] min-[360px]:h-[285px] min-[390px]:h-[310px] sm:h-[390px] sm:rounded-[28px] md:h-[400px] lg:h-[440px] xl:h-[470px]">
 
                 <img
-                  src="/pharmacy.png"
+                  src="/g6.jpg"
                   alt="In-House Pharmacy at Vighnaharta Hospital"
                   loading="lazy"
                   decoding="async"

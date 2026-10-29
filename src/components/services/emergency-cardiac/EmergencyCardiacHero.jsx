@@ -117,12 +117,12 @@ const EmergencyCardiacHero = () => {
               className="mt-8"
             >
               <a
-                href="tel:+919766999474"
+                href="tel:+917757004175"
                 className="group inline-flex min-h-[56px] items-center justify-center gap-3 rounded-full bg-[#C93542] px-7 py-3 text-[15px] font-bold text-white shadow-[0_14px_30px_rgba(201,53,66,0.2)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#A92C39] hover:shadow-[0_18px_35px_rgba(201,53,66,0.28)] sm:text-[16px]"
               >
                 <PhoneCall size={21} strokeWidth={2} />
 
-                Call Emergency – +91 9766999474
+                Call Emergency – +91 7757004175
 
                 <ArrowUpRight
                   size={19}

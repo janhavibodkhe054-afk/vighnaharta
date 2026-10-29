@@ -16,7 +16,7 @@ const slides = [
   {
     id: 1,
     image:
-      "https://i.pinimg.com/1200x/0c/68/17/0c68171948b54cdc564834e31d632ca5.jpg",
+      "hero1.png",
     eyebrow: "Welcome to Vighnaharta Hospital",
     title: "Advanced Healthcare.",
     highlight: "Compassionate Care.",
@@ -35,7 +35,7 @@ const slides = [
     description:
       "Timely emergency support, critical care facilities and a dedicated medical team ready when you need care the most.",
     primaryText: "Call Emergency",
-    primaryLink: "tel:+919766999474",
+    primaryLink: "tel:+917757004175",
     type: "call",
   },
   {
@@ -590,7 +590,7 @@ const HeroSection = () => {
                     {renderPrimaryButton(slide)}
 
                     <a
-                      href="tel:+919766999474"
+                      href="tel:+917757004175"
                       className="
                         group
                         inline-flex
@@ -638,7 +638,7 @@ const HeroSection = () => {
                     >
                       <Phone className="h-4 w-4 shrink-0" />
 
-                      <span>+91 9766999474</span>
+                      <span>+91 7757004175</span>
                     </a>
                   </div>
                 </div>

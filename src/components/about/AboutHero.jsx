@@ -209,26 +209,29 @@ const AboutHero = () => {
           ================================================== */}
 
           <p className="mt-4 max-w-[610px] text-[13px] font-normal leading-[1.7] text-white/70 sm:mt-5 sm:text-[15px]">
-            Compassionate, reliable and advanced multispeciality healthcare
-            for patients and families in Alephata and surrounding areas.
+            Welcome to Vighnaharta Hospital, the first cardiac rehabilitation
+            centre in Junnar Taluka, offering compassionate multispeciality
+            healthcare and dedicated cardiac recovery support for patients and
+            families in Alephata and surrounding regions.
           </p>
 
           {/* =================================================
               MINI TRUST ROW
           ================================================== */}
 
+          {/* MINI TRUST ROW */}
+
           <div className="mt-5 flex flex-wrap items-center gap-2 sm:gap-2.5">
+            <TrustPill
+              icon={HeartPulse}
+              text="Junnar Taluka's First Cardiac Rehabilitation Centre"
+            />
+
             <TrustPill icon={Clock3} text="24×7 Care" />
 
-            <TrustPill
-              icon={Stethoscope}
-              text="Multispeciality"
-            />
+            <TrustPill icon={Stethoscope} text="Multispeciality" />
 
-            <TrustPill
-              icon={ShieldCheck}
-              text="Patient Focused"
-            />
+            
           </div>
 
           {/* =================================================
@@ -263,10 +266,7 @@ const AboutHero = () => {
         <div className="relative flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.07] text-[#69CBF2] backdrop-blur-md">
           <span className="about-side-pulse absolute inset-0 rounded-full border border-[#69CBF2]/20" />
 
-          <Stethoscope
-            className="relative z-10 h-4 w-4"
-            strokeWidth={1.7}
-          />
+          <Stethoscope className="relative z-10 h-4 w-4" strokeWidth={1.7} />
         </div>
 
         <div>

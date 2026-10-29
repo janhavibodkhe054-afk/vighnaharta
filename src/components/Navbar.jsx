@@ -62,6 +62,12 @@ const serviceLinks = [
     path: "/services/dermatology-services",
   },
 
+  // NEWLY ADDED
+  {
+    name: "Anorectal Surgeries",
+    path: "/services/anorectal-surgeries",
+  },
+
   // EXISTING SERVICES
 
   {
@@ -93,7 +99,6 @@ const serviceLinks = [
     path: "/services/eecp-treatment",
   },
 ];
-
 const extraServiceLinks = [
   {
     name: "Treatments & Procedures",
@@ -105,7 +110,7 @@ const extraServiceLinks = [
    WHATSAPP
 ========================================================= */
 
-const WHATSAPP_NUMBER = "919766999474";
+const WHATSAPP_NUMBER = "917757004175";
 
 const WHATSAPP_MESSAGE =
   "Hello Vighnaharta Hospital, I would like to book an appointment.";
@@ -184,7 +189,7 @@ const Navbar = () => {
             <div className="flex items-center gap-5 lg:gap-8">
 
               <a
-                href="tel:+919766999474"
+                href="tel:+917757004175"
                 className="group flex items-center gap-2 text-[13px] font-medium leading-[1.7] transition sm:text-[15px]"
               >
                 <Phone
@@ -199,7 +204,7 @@ const Navbar = () => {
                   </span>
 
                   <span className="transition-colors duration-300 group-hover:text-[#55B8E9]">
-                    +91 9766999474
+                    +91 7757004175
                   </span>
                 </span>
               </a>
@@ -471,7 +476,7 @@ const Navbar = () => {
               {/* CALL */}
 
               <a
-                href="tel:+919766999474"
+                href="tel:+917757004175"
                 aria-label="Call Vighnaharta Hospital"
                 title="24x7 Emergency Call"
                 className="mr-3 flex h-[45px] w-[45px] shrink-0 items-center justify-center rounded-full border border-slate-200 text-[#102D5F] transition-all duration-300 hover:-translate-y-[2px] hover:border-[#102D5F] hover:bg-[#102D5F] hover:text-white"
@@ -506,7 +511,7 @@ const Navbar = () => {
             <div className="flex shrink-0 items-center gap-2 xl:hidden">
 
               <a
-                href="tel:+919766999474"
+                href="tel:+917757004175"
                 aria-label="Emergency Call"
                 className="hidden h-[42px] w-[42px] items-center justify-center rounded-full bg-[#EEF8FD] text-[#2E91C8] transition-all duration-300 hover:bg-[#102D5F] hover:text-white sm:flex"
               >
@@ -722,10 +727,10 @@ const Navbar = () => {
                   </p>
 
                   <a
-                    href="tel:+919766999474"
+                    href="tel:+917757004175"
                     className="mt-[2px] block text-[13px] font-bold leading-[1.7] text-[#102D5F] sm:text-[15px]"
                   >
-                    +91 9766999474
+                    +91 7757004175
                   </a>
                 </div>
 

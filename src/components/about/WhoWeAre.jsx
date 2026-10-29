@@ -63,7 +63,7 @@ const WhoWeAre = () => {
 
             <div className="group relative ml-auto w-[94%] overflow-hidden rounded-[20px] bg-[#E9F3F7] shadow-[0_20px_55px_rgba(16,45,95,0.10)] sm:rounded-[24px] lg:w-[95%] lg:rounded-[26px] xl:rounded-[30px]">
               <img
-                src="/doctor.png"
+                src="/doctor.jpg"
                 alt="Vighnaharta Hospital healthcare facility"
                 loading="lazy"
                 className="h-[300px] w-full object-cover object-center transition-transform duration-[1200ms] min-[360px]:h-[330px] min-[430px]:h-[380px] sm:h-[440px] md:h-[500px] lg:h-[480px] lg:group-hover:scale-[1.035] xl:h-[540px] 2xl:h-[570px]"

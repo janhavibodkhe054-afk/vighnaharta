@@ -141,7 +141,7 @@ const EmergencySection = () => {
                 </span>
 
                 <a
-                  href="tel:+919766999474"
+                  href="tel:+917757004175"
                   className="mt-0.5 block whitespace-nowrap text-[22px] font-bold tracking-[-.4px] text-white transition-colors hover:text-[#85DDF9] sm:text-[24px]"
                 >
                   +91 9766999474
@@ -150,7 +150,7 @@ const EmergencySection = () => {
             </div>
 
             <a
-              href="tel:+919766999474"
+              href="tel:+917757004175"
               className="group mt-4 flex min-h-[45px] w-full items-center justify-between rounded-full bg-white px-4 text-[12px] font-bold text-[#102D5F] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(0,0,0,.18)] sm:text-[13px]"
             >
               <span className="flex items-center gap-2">

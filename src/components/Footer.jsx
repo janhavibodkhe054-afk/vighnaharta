@@ -111,7 +111,7 @@ const Footer = () => {
 
               <div className="flex w-full shrink-0 flex-col gap-2.5 min-[430px]:flex-row lg:w-auto lg:gap-3">
                 <a
-                  href="tel:+919766999474"
+                  href="tel:+917757004175"
                   className="group flex min-h-[46px] flex-1 items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 text-[13px] font-semibold text-white backdrop-blur-sm transition-all duration-300 sm:min-h-[48px] sm:px-5 sm:text-[15px] lg:flex-none lg:min-h-[50px] lg:hover:bg-white lg:hover:text-[#102D5F]"
                 >
                   <Phone className="h-4 w-4" />
@@ -255,18 +255,13 @@ const Footer = () => {
 
                 <ContactItem icon={<Phone size={16} />} label="Call Us">
                   <a
-                    href="tel:+919766999474"
+                    href="tel:+917757004175"
                     className="block text-[13px] font-medium leading-[1.7] text-[#B5C2D4] transition-colors duration-300 hover:text-[#55B8E9] sm:text-[15px]"
                   >
-                    +91 9766999474
+                    +91 7757004175
                   </a>
 
-                  <a
-                    href="tel:+918042756213"
-                    className="mt-1 block text-[13px] font-medium leading-[1.7] text-[#B5C2D4] transition-colors duration-300 hover:text-[#55B8E9] sm:text-[15px]"
-                  >
-                    +91 8042756213
-                  </a>
+                  
                 </ContactItem>
 
                 {/* EMAIL */}

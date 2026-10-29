@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
@@ -8,75 +9,145 @@ import {
   Activity,
   Stethoscope,
   HeartPulse,
-  Droplets,
   Venus,
   ArrowUpRight,
+  Brain,
+  Ribbon,
+  ScanFace,
+  Scissors,
+  Ambulance,
+  ShieldCheck,
+  ScanHeart,
+  Syringe,
 } from "lucide-react";
 
 /* =========================================================
-   SPECIALITIES DATA
+   SPECIALITIES DATA — ALL 14 SERVICES
 ========================================================= */
 
 const specialities = [
   {
     id: "01",
-    title: "Orthopedics & Trauma",
+    title: "Cardiac Diagnostic Services",
     description:
-      "Care for fractures, joint injuries, ligament problems and orthopedic trauma.",
-    icon: Bone,
-    image: "/img1.png",
-    link: "/services/orthopedics-trauma",
+      "Cardiac diagnostic evaluation to help assess heart health and guide appropriate medical care.",
+    icon: ScanHeart,
+    image: "/cardiac1.png",
+    link: "/services/cardiac-diagnostic-services",
   },
   {
     id: "02",
-    title: "Spine Care",
+    title: "Oncology Treatment",
     description:
-      "Specialized evaluation and treatment for spine-related injuries and conditions.",
-    icon: Activity,
-    image: "/img2.png",
-    link: "/services/spine-care",
+      "Clinical consultation and appropriate treatment guidance for cancer-related conditions.",
+    icon: Ribbon,
+    image: "/oncology1.png",
+    link: "/services/oncology-treatment",
   },
   {
     id: "03",
-    title: "Advanced Surgery",
+    title: "Preventive Cardiology",
     description:
-      "Surgical consultation and treatment for hernia, appendix and other surgical conditions.",
-    icon: Stethoscope,
-    image: "/img3.png",
-    link: "/services/general-surgery",
+      "Heart health evaluation and preventive guidance focused on identifying and managing cardiovascular risk factors.",
+    icon: ShieldCheck,
+    image: "/heart1.webp",
+    link: "/services/preventive-cardiology",
   },
   {
     id: "04",
-    title: "General Medicine",
+    title: "Emergency Cardiac Services",
     description:
-      "Care for diabetes, hypertension and other acute and chronic medical conditions.",
-    icon: HeartPulse,
-    image: "/img4.png",
-    link: "/services/general-medicine",
+      "Timely clinical assessment and appropriate medical support for urgent cardiac concerns.",
+    icon: Ambulance,
+    image: "/attack.png",
+    link: "/services/emergency-cardiac-services",
   },
   {
     id: "05",
-    title: "Urology",
+    title: "Neurospine Care",
     description:
-      "Evaluation and treatment support for kidney, urinary and prostate-related conditions.",
-    icon: Droplets,
-    image: "/img5.png",
-    link: "/services/urology",
+      "Specialist evaluation and appropriate treatment guidance for neurological and spine-related conditions.",
+    icon: Brain,
+    image: "/neuro1.png",
+    link: "/services/neurospine-care",
   },
   {
     id: "06",
-    title: "Women’s Health",
+    title: "Dermatology Services",
     description:
-      "Dedicated gynecological care for women through different stages of life.",
-    icon: Venus,
-    image: "/img6.png",
-    link: "/services/gynecology",
+      "Evaluation and treatment guidance for skin, hair and nail-related health concerns.",
+    icon: ScanFace,
+    image: "/dermatology.png",
+    link: "/services/dermatology-services",
   },
   {
     id: "07",
+    title: "Anorectal Surgeries",
+    description:
+      "Evaluation and appropriate treatment planning for piles, fissures, fistulas and other anorectal conditions.",
+    icon: Scissors,
+    image: "/Anorectal-hero.jpg",
+    link: "/services/anorectal-surgeries",
+  },
+  {
+    id: "08",
+    title: "Orthopedics & Trauma Care",
+    description:
+      "Evaluation and treatment for bone, joint and musculoskeletal conditions, including injuries and orthopedic trauma.",
+    icon: Bone,
+    image: "/orthopedics.png",
+    link: "/services/orthopedics-trauma",
+  },
+  {
+    id: "09",
+    title: "Spine Care",
+    description:
+      "Medical evaluation and treatment support for spine injuries and other back or neck-related conditions.",
+    icon: Activity,
+    image: "/spinecare.png",
+    link: "/services/spine-care",
+  },
+  {
+    id: "10",
+    title: "General Medicine",
+    description:
+      "Evaluation and management of common medical conditions and ongoing health concerns.",
+    icon: Stethoscope,
+    image: "/general.png",
+    link: "/services/general-medicine",
+  },
+  {
+    id: "11",
+    title: "General & Advanced Surgery",
+    description:
+      "Evaluation and surgical care for conditions requiring appropriate operative management.",
+    icon: Syringe,
+    image: "/surgery.png",
+    link: "/services/general-surgery",
+  },
+  {
+    id: "12",
+    title: "Urology",
+    description:
+      "Evaluation and treatment support for kidney, urinary and prostate-related conditions.",
+    icon: HeartPulse,
+    image: "/urology.png",
+    link: "/services/urology",
+  },
+  {
+    id: "13",
+    title: "Gynecology & Women's Health",
+    description:
+      "Medical consultation and appropriate care for women's health needs at different stages of life.",
+    icon: Venus,
+    image: "/womenhealth.png",
+    link: "/services/gynecology",
+  },
+  {
+    id: "14",
     title: "EECP Treatment",
     description:
-      "Non-invasive treatment support designed to help improve blood flow and support cardiac care.",
+      "Non-invasive treatment support designed to help improve blood flow as part of appropriate cardiac care.",
     icon: HeartPulse,
     image: "/eecp.png",
     link: "/services/eecp-treatment",
@@ -251,7 +322,7 @@ const SpecialitiesSection = () => {
         }
 
         .speciality-marquee {
-          animation: specialityMarquee 52s linear infinite;
+          animation: specialityMarquee 104s linear infinite;
           will-change: transform;
         }
 
@@ -287,13 +358,13 @@ const SpecialitiesSection = () => {
 
         @media (max-width: 1023px) {
           .speciality-marquee {
-            animation-duration: 46s;
+            animation-duration: 92s;
           }
         }
 
         @media (max-width: 639px) {
           .speciality-marquee {
-            animation-duration: 40s;
+            animation-duration: 80s;
           }
         }
 

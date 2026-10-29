@@ -69,12 +69,7 @@ const UrologyHero = () => {
           {/* HEADING */}
           <h1 data-aos="fade-up" data-aos-delay="70" className="max-w-[650px] text-[32px] font-bold leading-[1.1] tracking-[-1px] text-[#102D5F] sm:text-[38px] md:text-[40px] lg:text-[44px] xl:text-[48px]">
             Care for{" "}
-            <span className="relative inline-block text-[#2E91C8]">
-              Urinary,
-              <svg className="absolute -bottom-[6px] left-0 h-[7px] w-full" viewBox="0 0 180 8" preserveAspectRatio="none">
-                <path className="uro-draw-line" d="M2 5 C48 1 122 2 178 4" fill="none" stroke="#69CBF2" strokeWidth="2.5" strokeLinecap="round" />
-              </svg>
-            </span>{" "}
+           
             Kidney & Prostate-Related Conditions
           </h1>
 
@@ -136,7 +131,7 @@ const UrologyHero = () => {
             </Link>
 
             <a
-              href="tel:+919766999474"
+              href="tel:+917757004175"
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full border border-[#CEE3EC] bg-white px-5 text-[13px] font-bold text-[#102D5F] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#2E91C8]/50 hover:text-[#2E91C8] sm:text-[14px]"
             >
               <Phone size={15} strokeWidth={1.8} />

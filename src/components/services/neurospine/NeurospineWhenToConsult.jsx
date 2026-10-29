@@ -251,12 +251,12 @@ const NeurospineWhenToConsult = () => {
 
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <a
-                  href="tel:+919766999474"
+                  href="tel:+917757004175"
                   className="inline-flex min-h-[46px] items-center justify-center gap-2 rounded-full bg-[#C93542] px-5 py-2.5 text-[13px] font-bold text-white transition-colors duration-300 hover:bg-[#A82D39] sm:text-[14px]"
                 >
                   <PhoneCall size={17} />
 
-                  Call Emergency – +91 9766999474
+                  Call Emergency – +91 7757004175
                 </a>
 
                 <span className="text-[12px] font-medium leading-[1.6] text-[#8A5D63] sm:text-[13px]">

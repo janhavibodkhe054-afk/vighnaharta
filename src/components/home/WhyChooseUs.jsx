@@ -1,11 +1,13 @@
 import React from "react";
-
+import { version } from "react-dom";
 import {
   Clock3,
   Stethoscope,
   Users,
   Building2,
   HeartHandshake,
+  HeartPulse,
+  BedDouble,
   MapPin,
   ShieldCheck,
   Check,
@@ -14,41 +16,55 @@ import {
 const reasons = [
   {
     number: "01",
+    icon: HeartPulse,
+    title: "First Cardiac Rehabilitation Centre in Junnar Taluka",
+    description:
+      "Proud to be the first cardiac rehabilitation centre in Junnar Taluka, bringing dedicated heart recovery and rehabilitation care closer to the community.",
+  },
+  {
+    number: "02",
+    icon: BedDouble,
+    title: "Comfort That Feels Like a Second Home",
+    description:
+      "A welcoming hospital ambience, thoughtfully designed patient rooms and essential in-room facilities create a comfortable, homely environment during recovery.",
+  },
+  {
+    number: "03",
     icon: Clock3,
     title: "24×7 Medical Support",
     description:
       "Emergency healthcare services available round the clock.",
   },
   {
-    number: "02",
+    number: "04",
     icon: Stethoscope,
     title: "Multispeciality Care",
     description:
       "Multiple medical specialties and treatments available at one location.",
   },
   {
-    number: "03",
+    number: "05",
     icon: Users,
     title: "Experienced Medical Team",
     description:
       "Patient care guided by qualified doctors and healthcare professionals.",
   },
   {
-    number: "04",
+    number: "06",
     icon: Building2,
     title: "Modern Medical Infrastructure",
     description:
       "Essential diagnostic, surgical and critical-care facilities.",
   },
   {
-    number: "05",
+    number: "07",
     icon: HeartHandshake,
     title: "Patient-Centric Approach",
     description:
       "Every patient receives attentive and respectful care based on their clinical needs.",
   },
   {
-    number: "06",
+    number: "08",
     icon: MapPin,
     title: "Convenient Location",
     description:
@@ -333,7 +349,7 @@ const WhyChooseUs = () => {
                 "
               >
                 <img
-                  src="/home1.png"
+                  src="/g3.jpg"
                   alt="Vighnaharta Hospital patient care"
                   loading="lazy"
                   className="

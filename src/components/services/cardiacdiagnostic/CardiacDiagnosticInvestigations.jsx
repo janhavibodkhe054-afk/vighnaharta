@@ -264,7 +264,7 @@ const CardiacDiagnosticInvestigations = () => {
           </div>
 
           <a
-            href="tel:+918042756213"
+            href="tel:+917757004175"
             className="group inline-flex min-h-[48px] shrink-0 items-center justify-center gap-2 rounded-full bg-[#102D5F] px-5 text-[13px] font-semibold text-white transition-colors duration-300 hover:bg-[#2E91C8] sm:text-[14px]"
           >
             <PhoneCall size={17} />

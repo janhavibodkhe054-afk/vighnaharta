@@ -125,12 +125,12 @@ const NeurospineFinalCTA = () => {
           <span className="hidden h-5 w-px bg-[#D3E2EE] sm:block" />
 
           <a
-            href="tel:+919766999474"
+            href="tel:+917757004175"
             className="flex items-center gap-2.5 text-[13px] font-semibold text-[#102D5F] transition-colors hover:text-[#2E91C8] sm:text-[15px]"
           >
             <PhoneCall size={19} className="text-[#2E91C8]" />
 
-            Emergency: +91 9766999474
+            Emergency: +91 7757004175
           </a>
         </div>
 

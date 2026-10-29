@@ -62,7 +62,7 @@ const OrthopedicsHero = () => {
               <ArrowRight size={16} strokeWidth={2} className="transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
 
-            <a href="tel:+919766999474" className="group flex min-h-[50px] items-center justify-center gap-2.5 rounded-full border border-[#D6E8F1] bg-white px-6 text-[13px] font-semibold text-[#102D5F] shadow-[0_8px_25px_rgba(16,45,95,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2E91C8] hover:text-[#2E91C8] sm:text-[14px]">
+            <a href="tel:+917757004175" className="group flex min-h-[50px] items-center justify-center gap-2.5 rounded-full border border-[#D6E8F1] bg-white px-6 text-[13px] font-semibold text-[#102D5F] shadow-[0_8px_25px_rgba(16,45,95,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2E91C8] hover:text-[#2E91C8] sm:text-[14px]">
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EAF7FC] text-[#2E91C8]">
                 <Phone size={13} strokeWidth={2} />
               </span>

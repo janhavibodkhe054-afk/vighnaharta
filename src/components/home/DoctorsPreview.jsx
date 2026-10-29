@@ -26,16 +26,18 @@ const doctors = [
       "Dr. Nagesh Hingmire provides patient-focused medical consultation, clinical assessment and appropriate treatment guidance.",
     image: "/nagesh.png",
   },
-  {
-    id: 2,
-    name: "Dr. Deepali Hingmire",
-    qualification: "B.A.M.S., CSD, CVD, I.C.U.",
-    speciality: "Medical Practitioner",
-    location: "Pune, Maharashtra",
-    description:
-      "Dr. Deepali Hingmire is a medical practitioner associated with Mutation Dermacare, providing healthcare consultation and guidance.",
-    image: "/deepali.webp",
-  },
+  
+{
+  id: 2,
+  name: "Dr. Deepali Hingmire",
+  qualification: "B.A.M.S.",
+  speciality: "Medical Practitioner",
+  location: "Pune, Maharashtra",
+  description:
+    "Dr. Deepali Hingmire is a medical practitioner associated with Mutation Dermacare — A Cosmetic Brand Built by a Doctor, providing healthcare consultation and guidance.",
+  image: "/deepali.webp",
+},
+
 ];
 
 /* ==========================================

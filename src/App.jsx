@@ -28,6 +28,7 @@ import CardiacDiagnostic from "./pages/CardiacDiagnostic";
 import EmergencyCardiac from "./pages/EmergencyCardiac";
 import Neurospine from "./pages/Neurospine";
 import Dermatology from "./pages/Dermatology";
+import Anorectal from "./pages/Anorectal";
 
 export default function App() {
   return (
@@ -58,6 +59,7 @@ export default function App() {
         <Route path="/services/emergency-cardiac-services" element={<EmergencyCardiac />} />
         <Route path="/services/neurospine-care" element={<Neurospine />} />
         <Route path="/services/dermatology-services" element={<Dermatology />} />
+        <Route path="/services/anorectal-surgeries" element={<Anorectal />} />
         {/* <Route path="/services/diagnostics" element={<Diagnostic/>} /> */}
       </Routes>
 

@@ -156,7 +156,7 @@ const OperationTheatre = () => {
           <div className="mt-8" data-aos="fade-up" data-aos-delay="210">
 
             <a
-              href="tel:+919766999474"
+              href="tel:+917757004175"
               className="ot-cta group relative inline-flex min-h-[48px] overflow-hidden rounded-full bg-[#102D5F] text-[13px] font-bold text-white shadow-[0_12px_30px_rgba(16,45,95,.16)] sm:min-h-[50px] sm:text-[14px]"
             >
 

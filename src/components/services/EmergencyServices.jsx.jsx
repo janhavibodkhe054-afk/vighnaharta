@@ -401,17 +401,17 @@ const EmergencyServices = () => {
                     </span>
 
                     <a
-                      href="tel:+919766999474"
+                      href="tel:+917757004175"
                       className="mt-0.5 block text-[20px] font-bold tracking-[-0.3px] text-white sm:text-[22px]"
                     >
-                      +91 9766999474
+                      +91 7757004175
                     </a>
                   </div>
                 </div>
 
                 {/* Button */}
                 <a
-                  href="tel:+919766999474"
+                  href="tel:+917757004175"
                   className="
                     group/call
 

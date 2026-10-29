@@ -245,7 +245,7 @@ const AmbulanceFacility = () => {
                       CALL CTA
                   ================================================= */}
                   <a
-                    href="tel:+919766999474"
+                    href="tel:+917757004175"
                     className="ambulance-call group relative overflow-hidden rounded-[18px] bg-[#102D5F] shadow-[0_14px_35px_rgba(16,45,95,.16)]"
                   >
 
@@ -266,7 +266,7 @@ const AmbulanceFacility = () => {
                           </span>
 
                           <span className="mt-0.5 block text-[17px] font-bold text-white sm:text-[19px]">
-                            +91 9766999474
+                            +91 7757004175
                           </span>
 
                         </div>

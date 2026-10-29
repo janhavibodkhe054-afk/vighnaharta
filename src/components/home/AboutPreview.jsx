@@ -1,6 +1,12 @@
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, HeartPulse, Stethoscope, Plus } from "lucide-react";
+import {
+  ArrowRight,
+  HeartPulse,
+  Stethoscope,
+  Plus,
+} from "lucide-react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -37,6 +43,7 @@ const AboutPreview = () => {
           {/* =====================================================
               IMAGE SIDE
           ===================================================== */}
+
           <div
             data-aos="fade-right"
             data-aos-duration="1000"
@@ -58,7 +65,7 @@ const AboutPreview = () => {
             {/* IMAGE */}
             <div className="about-image-wrap group relative z-10 overflow-hidden rounded-[24px] bg-[#EDF4F7] shadow-[0_24px_65px_rgba(16,45,95,.12)] sm:rounded-[28px] lg:rounded-[32px]">
               <img
-                src="/about.png"
+                src="/g13.jpg"
                 alt="Vighnaharta Hospital"
                 loading="lazy"
                 className="h-[320px] w-full object-cover object-center transition-transform duration-[1200ms] ease-out group-hover:scale-[1.035] sm:h-[420px] md:h-[470px] lg:h-[500px] xl:h-[525px]"
@@ -133,6 +140,7 @@ const AboutPreview = () => {
           {/* =====================================================
               CONTENT SIDE
           ===================================================== */}
+
           <div className="min-w-0 lg:pl-1">
             {/* LABEL */}
             <div
@@ -173,8 +181,32 @@ const AboutPreview = () => {
               </span>
             </h2>
 
+            {/* =====================================================
+                FIRST CARDIAC REHABILITATION CENTRE
+            ===================================================== */}
+
+            <div
+              data-aos="fade-up"
+              data-aos-delay="120"
+              className="mt-7 mb-5 inline-flex max-w-full items-center gap-3 rounded-[14px] border border-[#CBE8F4] bg-[#EFF9FD] px-4 py-3 sm:px-5"
+            >
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#2E91C8] text-white">
+                <HeartPulse size={22} strokeWidth={1.8} />
+              </span>
+
+              <div>
+                <span className="block text-[11px] font-bold uppercase tracking-[1.3px] text-[#2E91C8]">
+                  A Milestone in Heart Care
+                </span>
+
+                <p className="mt-1 text-[14px] font-bold leading-[1.5] text-[#102D5F] sm:text-[15px]">
+                  First Cardiac Rehabilitation Centre in Junnar Taluka
+                </p>
+              </div>
+            </div>
+
             {/* DESCRIPTION */}
-            <div className="mt-7 max-w-[680px] space-y-3.5 text-[14px] leading-[1.8] text-[#5F6F82] sm:text-[15px] lg:text-[16px]">
+            <div className="max-w-[680px] space-y-3.5 text-[14px] leading-[1.8] text-[#5F6F82] sm:text-[15px] lg:text-[16px]">
               <p data-aos="fade-up" data-aos-delay="140">
                 At Vighnaharta Hospital, we believe quality healthcare begins
                 with the right diagnosis, timely treatment and compassionate
@@ -182,9 +214,12 @@ const AboutPreview = () => {
               </p>
 
               <p data-aos="fade-up" data-aos-delay="200">
-                Located in Alephata, Taluka Junnar, our multispeciality hospital
-                brings multiple medical specialties, diagnostic facilities and
-                emergency services together under one roof.
+                Located in Alephata, Taluka Junnar, Vighnaharta Hospital
+                brings multispeciality healthcare, diagnostic facilities
+                and emergency services together under one roof. As the
+                first cardiac rehabilitation centre in Junnar Taluka,
+                we are committed to making dedicated cardiac recovery
+                and rehabilitation care more accessible to our community.
               </p>
 
               <p data-aos="fade-up" data-aos-delay="260">
@@ -239,14 +274,20 @@ const AboutPreview = () => {
             </div>
 
             {/* CTA */}
-            <div data-aos="fade-up" data-aos-delay="390" className="mt-6">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="390"
+              className="mt-6"
+            >
               <Link
                 to="/about"
                 className="group relative inline-flex min-h-[50px] items-center gap-3 overflow-hidden rounded-full bg-[#102D5F] px-6 text-[13px] font-semibold text-white shadow-[0_10px_28px_rgba(16,45,95,.16)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#2E91C8] hover:shadow-[0_16px_35px_rgba(46,145,200,.24)] sm:px-7 sm:text-[14px]"
               >
                 <span className="about-button-light absolute -left-[45%] top-0 h-full w-[35%] skew-x-[-20deg] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-                <span className="relative">Know More About Us</span>
+                <span className="relative">
+                  Know More About Us
+                </span>
 
                 <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-white/10 transition-all duration-300 group-hover:bg-white/20">
                   <ArrowRight
@@ -259,6 +300,10 @@ const AboutPreview = () => {
           </div>
         </div>
       </div>
+
+      {/* =====================================================
+          ORIGINAL CSS ANIMATIONS
+      ===================================================== */}
 
       <style>{`
         @keyframes aboutCurtain {

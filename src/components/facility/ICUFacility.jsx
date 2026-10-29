@@ -61,7 +61,7 @@ const ICUFacility = () => {
           <div className="icu-image-wrap group relative h-[270px] overflow-hidden rounded-[22px] bg-[#DDEBF2] shadow-[0_22px_55px_rgba(16,45,95,.15)] min-[360px]:h-[290px] min-[390px]:h-[310px] sm:h-[370px] sm:rounded-[28px] md:h-[390px] lg:h-[430px]">
 
             <img
-              src="/icu.png"
+              src="/g22.jpg"
               alt="ICU Facility at Vighnaharta Hospital"
               className="icu-image h-full w-full object-cover object-center"
             />
@@ -219,7 +219,7 @@ const ICUFacility = () => {
           <div className="mt-7 flex flex-wrap items-center gap-3" data-aos="fade-up" data-aos-delay="210">
 
             <a
-              href="tel:+919766999474"
+              href="tel:+917757004175"
               className="icu-cta group relative flex min-h-[46px] overflow-hidden rounded-full bg-[#102D5F] text-[12px] font-bold text-white shadow-[0_12px_30px_rgba(16,45,95,.16)] sm:min-h-[48px] sm:text-[13px]"
             >
               <span className="relative z-10 flex items-center gap-2.5 px-4 sm:px-5">

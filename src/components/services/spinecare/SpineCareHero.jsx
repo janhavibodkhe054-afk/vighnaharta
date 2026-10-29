@@ -100,7 +100,7 @@ const SpineCareHero = () => {
             </Link>
 
             <a
-              href="tel:+919766999474"
+              href="tel:+917757004175"
               className="group inline-flex min-h-[50px] items-center justify-center gap-2.5 rounded-full border border-[#D4E7F0] bg-white px-6 text-[13px] font-bold text-[#102D5F] shadow-[0_8px_25px_rgba(16,45,95,.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#2E91C8]/40 hover:text-[#2E91C8] sm:text-[14px]"
             >
               <Phone

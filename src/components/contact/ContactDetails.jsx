@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 import {
@@ -15,6 +16,16 @@ import {
   UserRound,
 } from "lucide-react";
 
+/* ==========================================
+   WHATSAPP CONFIGURATION
+========================================== */
+
+const WHATSAPP_NUMBER = "917757004175";
+
+/* ==========================================
+   DEPARTMENTS DATA
+========================================== */
+
 const departments = [
   "Orthopedics & Trauma",
   "Spine Care",
@@ -23,6 +34,10 @@ const departments = [
   "Urology",
   "Gynecology & Women's Health",
 ];
+
+/* ==========================================
+   MAIN COMPONENT
+========================================== */
 
 const ContactDetails = () => {
   const [formData, setFormData] = useState({
@@ -33,6 +48,10 @@ const ContactDetails = () => {
     message: "",
   });
 
+  /* ==========================================
+     HANDLE INPUT CHANGE
+  ========================================== */
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -42,18 +61,83 @@ const ContactDetails = () => {
     }));
   };
 
+  /* ==========================================
+     FORMAT APPOINTMENT DATE
+  ========================================== */
+
+  const formatDate = (dateValue) => {
+    if (!dateValue) return "Not specified";
+
+    const [year, month, day] = dateValue.split("-");
+
+    return `${day}/${month}/${year}`;
+  };
+
+  /* ==========================================
+     WHATSAPP FORM SUBMISSION
+  ========================================== */
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Connect this with your backend / API later.
-    console.log("Appointment Request:", formData);
+    const name = formData.name.trim();
+    const mobile = formData.mobile.trim();
+    const department = formData.department;
+    const date = formatDate(formData.date);
+    const message = formData.message.trim();
+
+    if (!name || !mobile || !department || !formData.date) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
+    const mobileDigits = mobile.replace(/\D/g, "");
+
+    if (mobileDigits.length < 10 || mobileDigits.length > 13) {
+      alert("Please enter a valid mobile number.");
+      return;
+    }
+
+    const whatsappMessage = [
+      "🏥 *VIGHNAHARTA HOSPITAL*",
+      "📋 *NEW APPOINTMENT REQUEST*",
+      "",
+      "━━━━━━━━━━━━━━━━━━━━",
+      "",
+      `👤 *Patient Name:* ${name}`,
+      "",
+      `📞 *Mobile Number:* ${mobile}`,
+      "",
+      `🩺 *Department:* ${department}`,
+      "",
+      `📅 *Preferred Date:* ${date}`,
+      "",
+      `💬 *Message / Concern:*`,
+      message || "Not provided",
+      "",
+      "━━━━━━━━━━━━━━━━━━━━",
+      "",
+      "📍 *Hospital:* Vighnaharta Hospital",
+      "Alephata, Taluka Junnar, Pune",
+      "",
+      "Please confirm my appointment.",
+      "",
+      "Thank you!",
+    ].join("\n");
+
+    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    // Open WhatsApp using a direct navigation.
+    window.location.href = whatsappURL;
   };
 
   return (
     <section className="relative isolate overflow-hidden bg-[#F7FBFD] py-10 sm:py-12 md:py-14 lg:py-16 xl:py-20">
-      {/* =====================================================
+      {/* ======================================
           BACKGROUND
-      ====================================================== */}
+      ====================================== */}
 
       <div className="pointer-events-none absolute -left-[160px] top-[12%] h-[320px] w-[320px] rounded-full bg-[#DFF3FB]/70 blur-[90px] lg:h-[470px] lg:w-[470px] lg:blur-[120px]" />
 
@@ -61,15 +145,16 @@ const ContactDetails = () => {
 
       <div className="pointer-events-none absolute inset-0 opacity-[0.02] [background-image:radial-gradient(#102D5F_1px,transparent_1px)] [background-size:24px_24px]" />
 
-      {/* =====================================================
+      {/* ======================================
           CONTAINER
-      ====================================================== */}
+      ====================================== */}
 
       <div className="relative z-10 mx-auto w-full max-w-[1380px] px-3 min-[360px]:px-4 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-start gap-8 sm:gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-12 xl:grid-cols-[0.78fr_1.22fr] xl:gap-16">
-          {/* =================================================
+
+          {/* ======================================
               LEFT — CONTACT INFORMATION
-          ================================================== */}
+          ====================================== */}
 
           <div className="contact-left">
             {/* SECTION LABEL */}
@@ -96,18 +181,20 @@ const ContactDetails = () => {
               assistance. Our hospital is available 24 hours, Monday to Sunday.
             </p>
 
-            {/* =================================================
+            {/* ======================================
                 CONTACT LIST
-            ================================================== */}
+            ====================================== */}
 
             <div className="mt-6 overflow-hidden rounded-[18px] border border-[#DCEAF0] bg-white shadow-[0_14px_40px_rgba(16,45,95,0.055)] sm:mt-7 sm:rounded-[22px] lg:mt-8">
+
               <ContactRow
                 icon={MapPin}
                 label="Hospital Address"
               >
                 <p>
-                  Near Balaji Petrol Pump, Nagar Kalyan Road, Alephata,
-                  Taluka Junnar, Pune – 412411, Maharashtra
+                  Near Balaji Petrol Pump, Nagar Kalyan Road,
+                  Alephata, Taluka Junnar, Pune – 412411,
+                  Maharashtra
                 </p>
               </ContactRow>
 
@@ -117,17 +204,10 @@ const ContactDetails = () => {
               >
                 <div className="flex flex-col gap-1">
                   <a
-                    href="tel:+918042756213"
+                    href="tel:+917757004175"
                     className="w-fit transition-colors duration-300 hover:text-[#2E91C8]"
                   >
-                    +91 8042756213
-                  </a>
-
-                  <a
-                    href="tel:+919766999474"
-                    className="w-fit transition-colors duration-300 hover:text-[#2E91C8]"
-                  >
-                    +91 9766999474
+                    +91 7757004175
                   </a>
                 </div>
               </ContactRow>
@@ -163,11 +243,12 @@ const ContactDetails = () => {
               </ContactRow>
             </div>
 
-            {/* =================================================
+            {/* ======================================
                 EMERGENCY BLOCK
-            ================================================== */}
+            ====================================== */}
 
             <div className="emergency-card relative mt-4 overflow-hidden rounded-[18px] bg-[#102D5F] p-4 shadow-[0_16px_40px_rgba(16,45,95,0.16)] min-[360px]:p-5 sm:mt-5 sm:rounded-[22px] sm:p-6">
+
               <div className="pointer-events-none absolute -right-[60px] -top-[70px] h-[170px] w-[170px] rounded-full bg-[#55B8E9]/20 blur-[40px]" />
 
               <div className="pointer-events-none absolute inset-0 opacity-[0.04] [background-image:radial-gradient(#ffffff_1px,transparent_1px)] [background-size:15px_15px]" />
@@ -189,12 +270,12 @@ const ContactDetails = () => {
                 </h3>
 
                 <p className="m-0 mt-2 max-w-[430px] text-[13px] leading-[1.7] text-white/60 sm:text-[15px]">
-                  For emergency cases, call the hospital directly instead of
-                  using the appointment form.
+                  For emergency cases, call the hospital directly
+                  instead of using the appointment form.
                 </p>
 
                 <a
-                  href="tel:+919766999474"
+                  href="tel:+917757004175"
                   className="group mt-4 inline-flex min-h-[46px] w-full items-center justify-center gap-2.5 rounded-full bg-white px-5 py-2.5 text-[13px] font-bold text-[#102D5F] shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-all duration-300 min-[400px]:w-auto sm:min-h-[48px] sm:px-6 sm:text-[15px] lg:hover:-translate-y-0.5 lg:hover:bg-[#EAF7FC]"
                 >
                   <Phone
@@ -202,7 +283,7 @@ const ContactDetails = () => {
                     strokeWidth={1.8}
                   />
 
-                  Call +91 9766999474
+                  Call +91 7757004175
 
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
@@ -210,11 +291,12 @@ const ContactDetails = () => {
             </div>
           </div>
 
-          {/* =================================================
+          {/* ======================================
               RIGHT — APPOINTMENT FORM
-          ================================================== */}
+          ====================================== */}
 
           <div className="contact-form-reveal relative overflow-hidden rounded-[20px] border border-[#DCEBF1] bg-white shadow-[0_24px_65px_rgba(16,45,95,0.09)] sm:rounded-[24px] lg:rounded-[26px] xl:rounded-[28px]">
+
             {/* TOP ACCENT */}
 
             <div className="absolute left-0 right-0 top-0 h-[4px] bg-gradient-to-r from-[#102D5F] via-[#2E91C8] to-[#69CBF2]" />
@@ -224,11 +306,13 @@ const ContactDetails = () => {
             <div className="pointer-events-none absolute -right-[80px] -top-[90px] h-[220px] w-[220px] rounded-full bg-[#DFF4FC] blur-[55px]" />
 
             <div className="relative z-10 p-4 min-[360px]:p-5 sm:p-6 md:p-7 lg:p-7 xl:p-8">
-              {/* =================================================
+
+              {/* ======================================
                   FORM HEADER
-              ================================================== */}
+              ====================================== */}
 
               <div className="mb-5 flex items-start gap-3 sm:mb-6 sm:gap-4">
+
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px] bg-[#EAF7FC] text-[#2E91C8] sm:h-12 sm:w-12 sm:rounded-[14px]">
                   <CalendarDays
                     className="h-5 w-5 sm:h-[22px] sm:w-[22px]"
@@ -246,19 +330,21 @@ const ContactDetails = () => {
                   </h3>
 
                   <p className="m-0 mt-1 text-[13px] leading-[1.7] text-[#7A8B98] sm:text-[15px]">
-                    Fill in your details and submit your appointment request.
+                    Fill in your details and continue to WhatsApp
+                    to send your appointment request.
                   </p>
                 </div>
               </div>
 
-              {/* =================================================
+              {/* ======================================
                   FORM
-              ================================================== */}
+              ====================================== */}
 
               <form
                 onSubmit={handleSubmit}
                 className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 sm:gap-4"
               >
+
                 {/* PATIENT NAME */}
 
                 <FormField
@@ -338,6 +424,7 @@ const ContactDetails = () => {
                     type="date"
                     name="date"
                     value={formData.date}
+                    min={new Date().toLocaleDateString("en-CA")}
                     onChange={handleChange}
                     required
                     className={inputClasses}
@@ -362,33 +449,35 @@ const ContactDetails = () => {
                   </FormField>
                 </div>
 
-                {/* =================================================
+                {/* ======================================
                     PRIVACY NOTE
-                ================================================== */}
+                ====================================== */}
 
                 <div className="flex items-start gap-2.5 rounded-[13px] border border-[#DDECF2] bg-[#F7FBFD] px-3.5 py-3 sm:col-span-2 sm:rounded-[15px] sm:px-4">
+
                   <ShieldCheck
                     className="mt-[2px] h-4 w-4 shrink-0 text-[#2E91C8]"
                     strokeWidth={1.7}
                   />
 
                   <p className="m-0 text-[13px] leading-[1.7] text-[#718391] sm:text-[15px]">
-                    By submitting this form, you agree to share the information
-                    entered above with Vighnaharta Hospital for the purpose of
-                    responding to your appointment request.
+                    By continuing to WhatsApp, you agree to share
+                    the information entered above with Vighnaharta
+                    Hospital for the purpose of responding to your
+                    appointment request.
                   </p>
                 </div>
 
-                {/* =================================================
+                {/* ======================================
                     SUBMIT
-                ================================================== */}
+                ====================================== */}
 
                 <div className="pt-0.5 sm:col-span-2">
                   <button
                     type="submit"
                     className="group flex min-h-[48px] w-full items-center justify-center gap-2.5 rounded-full bg-[#102D5F] px-5 py-3 text-[13px] font-bold text-white shadow-[0_10px_28px_rgba(16,45,95,0.18)] transition-all duration-300 sm:min-h-[52px] sm:text-[15px] lg:hover:-translate-y-0.5 lg:hover:bg-[#2E91C8] lg:hover:shadow-[0_14px_32px_rgba(46,145,200,0.22)]"
                   >
-                    Request Appointment
+                    Request Appointment on WhatsApp
 
                     <ArrowRight
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -398,11 +487,12 @@ const ContactDetails = () => {
                 </div>
               </form>
 
-              {/* =================================================
+              {/* ======================================
                   EMERGENCY FORM WARNING
-              ================================================== */}
+              ====================================== */}
 
               <div className="mt-4 flex items-start gap-2.5 border-t border-[#E4EEF2] pt-4">
+
                 <AlertTriangle
                   className="mt-[2px] h-4 w-4 shrink-0 text-[#C87926]"
                   strokeWidth={1.8}
@@ -414,10 +504,10 @@ const ContactDetails = () => {
                   </strong>{" "}
                   Do not use this form. Please call{" "}
                   <a
-                    href="tel:+919766999474"
+                    href="tel:+917757004175"
                     className="font-bold text-[#2E91C8] transition-colors hover:text-[#102D5F]"
                   >
-                    +91 9766999474
+                    +91 7757004175
                   </a>{" "}
                   directly.
                 </p>
@@ -427,9 +517,9 @@ const ContactDetails = () => {
         </div>
       </div>
 
-      {/* =====================================================
+      {/* ======================================
           ANIMATIONS
-      ====================================================== */}
+      ====================================== */}
 
       <style>{`
         @keyframes contactLeftReveal {
@@ -506,9 +596,9 @@ const ContactDetails = () => {
   );
 };
 
-/* =========================================================
+/* ==========================================
    CONTACT ROW
-========================================================= */
+========================================== */
 
 const ContactRow = ({
   icon: Icon,
@@ -542,9 +632,9 @@ const ContactRow = ({
   );
 };
 
-/* =========================================================
+/* ==========================================
    FORM FIELD
-========================================================= */
+========================================== */
 
 const FormField = ({
   label,
@@ -567,41 +657,31 @@ const FormField = ({
   );
 };
 
-/* =========================================================
+/* ==========================================
    INPUT STYLES
-========================================================= */
+========================================== */
 
 const inputClasses = `
   w-full
   min-h-[46px]
-
   rounded-[12px]
-
   border
   border-[#D9E7ED]
-
   bg-[#FBFDFE]
-
   px-3.5
-
   text-[13px]
   font-medium
   leading-[1.7]
   text-[#102D5F]
-
   outline-none
-
   transition-all
   duration-300
-
   placeholder:text-[#A1AFB8]
   placeholder:font-normal
-
   focus:border-[#2E91C8]
   focus:bg-white
   focus:ring-[3px]
   focus:ring-[#2E91C8]/10
-
   sm:min-h-[50px]
   sm:rounded-[14px]
   sm:px-4

@@ -171,11 +171,11 @@ const EmergencyCardiacWarningSigns = () => {
             </div>
 
             <a
-              href="tel:+919766999474"
+              href="tel:+917757004175"
               className="group inline-flex min-h-[54px] shrink-0 items-center justify-center gap-2.5 self-start rounded-full bg-[#C93542] px-6 py-3 text-[14px] font-bold text-white shadow-[0_12px_28px_rgba(201,53,66,0.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#E04B58] lg:self-auto sm:text-[15px]"
             >
               <PhoneCall size={19} strokeWidth={1.8} />
-              Call +91 9766999474
+              Call +91 7757004175
               <ArrowUpRight
                 size={18}
                 className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

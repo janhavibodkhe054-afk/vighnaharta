@@ -142,7 +142,7 @@ const FacilitiesHero = () => {
             </button>
 
             <a
-              href="tel:+919766999474"
+              href="tel:+917757004175"
               className="group flex min-h-[44px] items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-4 py-1.5 text-[13px] font-bold leading-[1.4] text-white backdrop-blur-md transition-all duration-300 hover:border-[#FF7180]/35 hover:bg-[#FF5266]/10 sm:min-h-[48px] sm:px-5 sm:text-[15px]"
             >
               <span className="relative flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#FF5266]/10 text-[#FF7380]">
@@ -175,7 +175,7 @@ const FacilitiesHero = () => {
 
           <div className="hero-image-card absolute inset-x-[2%] bottom-[10%] top-[2%] overflow-hidden rounded-[20px] border border-white/[0.12] bg-[#0A2848] shadow-[0_25px_60px_rgba(0,0,0,.3)] min-[390px]:inset-x-[4%] sm:inset-x-[5%] sm:rounded-[28px] md:left-[3%] md:right-[12%] lg:left-[4%] lg:right-[14%]">
             <img
-              src="/facilities-hero.png"
+              src="/facility-hero.avif"
               alt="Vighnaharta Hospital facilities"
               className="hero-image block h-full w-full object-cover"
             />

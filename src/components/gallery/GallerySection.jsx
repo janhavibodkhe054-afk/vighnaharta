@@ -15,7 +15,7 @@ import {
 ========================================== */
 
 const galleryImages = Array.from(
-  { length: 40 },
+  { length: 38 },
   (_, index) => `/g${index + 1}.jpg`
 );
 

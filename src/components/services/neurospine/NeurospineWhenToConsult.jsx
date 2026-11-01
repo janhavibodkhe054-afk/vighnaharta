@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -18,15 +19,15 @@ import "aos/dist/aos.css";
 ========================================== */
 
 const consultationReasons = [
+  "Persistent headaches, dizziness or other brain-related neurological symptoms.",
+
   "Persistent neck or back pain with radiating symptoms.",
 
   "Numbness, tingling or weakness affecting an arm or leg.",
 
-  "Symptoms following a spine-related injury.",
+  "Symptoms following a head or spine-related injury.",
 
-  "Difficulty with movement associated with suspected nerve involvement.",
-
-  "A recommendation for specialist neurological or spine evaluation.",
+  "A recommendation for specialist brain, spine or nerve evaluation.",
 ];
 
 /* ==========================================
@@ -76,7 +77,7 @@ const NeurospineWhenToConsult = () => {
             <div className="group relative h-[360px] overflow-hidden rounded-[26px] bg-[#DCEAF3] shadow-[0_25px_65px_rgba(16,45,95,0.13)] sm:h-[470px] lg:h-[550px]">
               <img
                 src="/neuro2.png"
-                alt="Medical consultation for spine and nerve-related symptoms"
+                alt="Medical consultation for brain, spine and nerve-related symptoms"
                 loading="lazy"
                 className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.05]"
               />
@@ -95,7 +96,7 @@ const NeurospineWhenToConsult = () => {
 
                   <div>
                     <p className="m-0 text-[18px] font-bold text-white sm:text-[21px]">
-                      Spine &amp; Nerve Assessment
+                      Brain, Spine &amp; Nerve Assessment
                     </p>
 
                     <p className="m-0 mt-1 text-[12px] text-white/85 sm:text-[14px]">
@@ -131,7 +132,7 @@ const NeurospineWhenToConsult = () => {
               />
 
               <span className="text-[12px] font-bold uppercase tracking-[1.3px] text-[#2E91C8] sm:text-[14px]">
-                Neurospine Consultation
+                Brain, Spine &amp; Nerve Consultation
               </span>
             </div>
 
@@ -144,18 +145,20 @@ const NeurospineWhenToConsult = () => {
             >
               When to Seek{" "}
               <span className="text-[#2E91C8]">
-                Neurospine Consultation
+                Brain, Spine &amp; Nerve Consultation
               </span>
             </h2>
+
+            {/* DESCRIPTION */}
 
             <p
               data-aos="fade-up"
               data-aos-delay="120"
               className="m-0 mt-4 text-[14px] leading-[1.8] text-[#53667C] sm:text-[16px]"
             >
-              Certain symptoms affecting the spine, nerves
-              or movement may require medical assessment
-              and specialist guidance.
+              Certain symptoms affecting the brain, spine,
+              nerves or neurological function may require
+              medical assessment and specialist guidance.
             </p>
 
             {/* ======================================
@@ -243,10 +246,12 @@ const NeurospineWhenToConsult = () => {
               </div>
 
               <p className="m-0 text-[14px] leading-[1.85] text-[#684A50] sm:text-[16px]">
-                New bladder or bowel dysfunction, numbness
-                around the groin or rapidly progressive limb
-                weakness may indicate a medical emergency
-                and requires immediate assessment.
+                Sudden facial drooping, speech difficulty,
+                severe sudden headache, new bladder or bowel
+                dysfunction, numbness around the groin or
+                rapidly progressive limb weakness may indicate
+                a medical emergency and require immediate
+                assessment.
               </p>
 
               <div className="mt-5 flex flex-wrap items-center gap-3">

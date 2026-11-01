@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import {
   Network,
@@ -11,43 +12,65 @@ import {
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+/* ==========================================
+   BRAIN, SPINE & NERVE CARE AREAS
+========================================== */
+
 const neurospineAreas = [
   {
     number: "01",
+    title: "Brain-Related Conditions",
+    description:
+      "Clinical evaluation of symptoms that may be associated with conditions affecting the brain and neurological function.",
+    icon: Brain,
+  },
+  {
+    number: "02",
+    title: "Headache & Dizziness",
+    description:
+      "Assessment of persistent headaches, dizziness and other symptoms that may require neurological evaluation.",
+    icon: Activity,
+  },
+  {
+    number: "03",
     title: "Spine-Related Nerve Symptoms",
     description:
       "Evaluation of symptoms that may indicate irritation or compression of spinal nerves.",
     icon: Network,
   },
   {
-    number: "02",
+    number: "04",
     title: "Back & Neck Conditions",
     description:
       "Assessment of persistent or clinically significant back and neck concerns.",
     icon: Bone,
   },
   {
-    number: "03",
+    number: "05",
     title: "Spine Trauma",
     description:
       "Medical evaluation of injuries affecting the spinal region.",
     icon: ShieldAlert,
   },
   {
-    number: "04",
+    number: "06",
     title: "Neurological Symptoms",
     description:
-      "Assessment of weakness, numbness or other symptoms that may require specialist review.",
+      "Assessment of weakness, numbness, balance difficulties or other symptoms that may require specialist review.",
     icon: Brain,
   },
   {
-    number: "05",
+    number: "07",
     title: "Surgical Consultation",
     description:
-      "Specialist assessment when an operative approach may need consideration.",
+      "Specialist assessment when an operative approach may need consideration for selected brain, spine or nerve-related conditions.",
     icon: Stethoscope,
   },
 ];
+
+/* ==========================================
+   MAIN COMPONENT
+========================================== */
 
 const NeurospineKeyAreas = () => {
   useEffect(() => {
@@ -103,7 +126,7 @@ const NeurospineKeyAreas = () => {
             />
 
             <span className="text-[12px] font-bold uppercase tracking-[1.4px] text-[#BCEBFA] sm:text-[14px]">
-              Neurospine Care
+              Brain, Spine &amp; Nerve Care
             </span>
           </div>
 
@@ -114,7 +137,7 @@ const NeurospineKeyAreas = () => {
           >
             Key Areas of{" "}
             <span className="text-[#69CBF2]">
-              Neurospine Evaluation
+              Brain, Spine &amp; Nerve Evaluation
             </span>
           </h2>
 
@@ -123,9 +146,10 @@ const NeurospineKeyAreas = () => {
             data-aos-delay="120"
             className="mx-auto mt-5 max-w-[730px] text-[14px] leading-[1.85] text-[#C3D4E6] sm:text-[16px]"
           >
-            Medical assessment of spine-related conditions,
-            nerve symptoms and neurological concerns to guide
-            appropriate care decisions.
+            Medical assessment of brain-related concerns,
+            spine conditions, nerve symptoms and neurological
+            difficulties to support appropriate diagnosis,
+            specialist consultation and treatment decisions.
           </p>
         </div>
 
@@ -134,7 +158,7 @@ const NeurospineKeyAreas = () => {
         <div className="relative">
           {/* CONNECTION LINE - DESKTOP */}
 
-          <div className="pointer-events-none absolute left-[10%] right-[10%] top-[48px] hidden h-[2px] bg-white/15 lg:block">
+          <div className="pointer-events-none absolute left-[7%] right-[7%] top-[48px] hidden h-[2px] bg-white/15 lg:block">
             <div className="neuro-path-progress h-full bg-gradient-to-r from-[#2E91C8] via-[#69CBF2] to-[#2E91C8]" />
           </div>
 
@@ -146,7 +170,7 @@ const NeurospineKeyAreas = () => {
 
           {/* ITEMS */}
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-5">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-7 lg:gap-4">
             {neurospineAreas.map((area, index) => {
               const Icon = area.icon;
 
@@ -185,8 +209,10 @@ const NeurospineKeyAreas = () => {
                         group-hover:text-[#071B3A]
                         sm:h-[74px]
                         sm:w-[74px]
-                        lg:h-[96px]
-                        lg:w-[96px]
+                        lg:h-[82px]
+                        lg:w-[82px]
+                        xl:h-[96px]
+                        xl:w-[96px]
                       "
                     >
                       <Icon
@@ -208,13 +234,13 @@ const NeurospineKeyAreas = () => {
 
                     {/* TITLE */}
 
-                    <h3 className="mt-2 text-[18px] font-bold leading-[1.4] text-white sm:text-[20px] lg:min-h-[60px] xl:text-[21px]">
+                    <h3 className="mt-2 text-[18px] font-bold leading-[1.4] text-white sm:text-[20px] lg:min-h-[90px] lg:text-[17px] xl:text-[19px]">
                       {area.title}
                     </h3>
 
                     {/* DESCRIPTION */}
 
-                    <p className="mt-3 text-[13px] leading-[1.8] text-[#BED0E3] sm:text-[15px]">
+                    <p className="mt-3 text-[13px] leading-[1.8] text-[#BED0E3] sm:text-[15px] lg:text-[13px] xl:text-[14px]">
                       {area.description}
                     </p>
 

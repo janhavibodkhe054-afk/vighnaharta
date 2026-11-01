@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -47,7 +48,7 @@ const NeurospineFinalCTA = () => {
           <Brain size={18} className="text-[#2E91C8]" />
 
           <span className="text-[12px] font-bold uppercase tracking-[1.5px] text-[#2E91C8] sm:text-[14px]">
-            Neurospine Care
+            Brain, Spine &amp; Nerve Care
           </span>
         </div>
 
@@ -59,7 +60,7 @@ const NeurospineFinalCTA = () => {
         >
           Take the Next Step Towards{" "}
           <span className="text-[#2E91C8]">
-            Better Spine &amp; Nerve Health
+            Better Brain, Spine &amp; Nerve Health
           </span>
         </h2>
 
@@ -69,10 +70,11 @@ const NeurospineFinalCTA = () => {
           data-aos-delay="130"
           className="mx-auto mt-5 max-w-[730px] text-[14px] leading-[1.9] text-[#53667C] sm:text-[16px]"
         >
-          If you are experiencing persistent back pain,
-          neck discomfort or nerve-related symptoms,
-          seek medical evaluation to understand your
-          condition and discuss appropriate next steps.
+          If you are experiencing persistent headaches,
+          dizziness, back pain, neck discomfort or
+          nerve-related symptoms, seek medical evaluation
+          to understand your condition and discuss
+          appropriate next steps.
         </p>
 
         {/* CTA BUTTONS */}
@@ -139,8 +141,9 @@ const NeurospineFinalCTA = () => {
           data-aos="fade-up"
           className="mx-auto mt-6 max-w-[760px] text-[12px] leading-[1.8] text-[#64748B] sm:text-[13px]"
         >
-          For sudden or rapidly worsening weakness, new
-          bladder or bowel dysfunction, or numbness around
+          For sudden facial drooping, speech difficulty,
+          severe sudden headache, rapidly worsening weakness,
+          new bladder or bowel dysfunction, or numbness around
           the groin, seek emergency medical assessment
           immediately rather than waiting for a routine
           appointment.

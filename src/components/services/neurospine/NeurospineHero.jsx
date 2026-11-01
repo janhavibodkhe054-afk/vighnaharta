@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -55,7 +56,7 @@ const NeurospineHero = () => {
               </span>
 
               <span className="text-[12px] font-bold uppercase tracking-[1.3px] text-[#2E91C8] sm:text-[14px]">
-                Neurospine Care
+                Brain, Spine &amp; Nerve Care
               </span>
             </div>
 
@@ -67,7 +68,7 @@ const NeurospineHero = () => {
             >
               Specialized Evaluation for{" "}
               <span className="text-[#2E91C8]">
-                Spine &amp; Nerve-Related Conditions
+                Brain, Spine &amp; Nerve-Related Conditions
               </span>
             </h1>
 
@@ -79,8 +80,11 @@ const NeurospineHero = () => {
             >
               Medical assessment and appropriate treatment
               guidance for selected conditions affecting the
-              spine, spinal nerves and related neurological
-              function.
+              brain, spine, spinal cord, peripheral nerves
+              and related neurological functions. Our approach
+              focuses on understanding symptoms, clinical
+              evaluation and guiding patients towards
+              suitable medical care and follow-up.
             </p>
 
             {/* HIGHLIGHTS */}
@@ -89,6 +93,16 @@ const NeurospineHero = () => {
               data-aos-delay="180"
               className="mt-7 flex flex-wrap gap-x-7 gap-y-4"
             >
+              <div className="flex items-center gap-2.5">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E9F3FA] text-[#2E91C8]">
+                  <Brain size={20} strokeWidth={1.8} />
+                </span>
+
+                <span className="text-[14px] font-semibold text-[#254565] sm:text-[15px]">
+                  Brain &amp; Neurological Assessment
+                </span>
+              </div>
+
               <div className="flex items-center gap-2.5">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#E9F3FA] text-[#2E91C8]">
                   <Activity size={20} strokeWidth={1.8} />
@@ -156,7 +170,7 @@ const NeurospineHero = () => {
             <div className="group relative h-[350px] overflow-hidden rounded-[26px] bg-[#DCE8F0] shadow-[0_25px_65px_rgba(16,45,95,0.15)] sm:h-[440px] sm:rounded-[32px] lg:h-[500px] xl:h-[540px]">
               <img
                 src="/neuro1.png"
-                alt="Anatomical visualization of the human spine and spinal nerves"
+                alt="Medical visualization related to brain, spine and nerve care"
                 fetchPriority="high"
                 className="h-full w-full object-cover object-center transition-transform duration-[1000ms] group-hover:scale-[1.045]"
               />
@@ -172,7 +186,7 @@ const NeurospineHero = () => {
 
                 <div>
                   <p className="m-0 text-[17px] font-bold text-white sm:text-[19px]">
-                    Spine &amp; Nerve Evaluation
+                    Brain, Spine &amp; Nerve Evaluation
                   </p>
 
                   <p className="m-0 mt-1 text-[12px] text-white/85 sm:text-[14px]">
@@ -190,7 +204,7 @@ const NeurospineHero = () => {
 
               <div>
                 <p className="m-0 text-[14px] font-bold text-[#102D5F] sm:text-[16px]">
-                  Neurospine Care
+                  Brain, Spine &amp; Nerve Care
                 </p>
 
                 <p className="m-0 mt-1 text-[12px] leading-[1.5] text-[#64748B] sm:text-[13px]">

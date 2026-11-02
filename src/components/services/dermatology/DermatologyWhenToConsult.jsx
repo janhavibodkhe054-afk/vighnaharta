@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -19,6 +20,8 @@ import "aos/dist/aos.css";
 const consultationReasons = [
   "Persistent or recurring skin rashes.",
   "Acne or inflammatory skin concerns.",
+  "Hypopigmentation or hyperpigmentation of the skin.",
+  "Warts, moles, skin tags or other skin lesions.",
   "Unexplained hair loss or scalp symptoms.",
   "Nail changes requiring medical evaluation.",
   "Skin lesions that change in size, colour or appearance.",
@@ -153,9 +156,10 @@ const DermatologyWhenToConsult = () => {
               data-aos-delay="120"
               className="m-0 mt-4 text-[14px] leading-[1.8] text-[#53667C] sm:text-[16px]"
             >
-              Persistent skin concerns, changes in hair or
-              nail health, and unusual skin symptoms may
-              require professional medical evaluation.
+              Persistent skin concerns, changes in skin
+              pigmentation, warts, moles, skin lesions,
+              hair or nail health, and unusual skin symptoms
+              may require professional medical evaluation.
             </p>
 
             {/* ======================================
@@ -227,8 +231,9 @@ const DermatologyWhenToConsult = () => {
             </h3>
 
             <p className="m-0 mt-1.5 text-[13px] leading-[1.8] text-[#617185] sm:text-[15px]">
-              Skin lesions that change in size, colour or
-              appearance should be evaluated by a qualified
+              Skin lesions, including moles, warts or other
+              unusual growths, that change in size, colour
+              or appearance should be evaluated by a qualified
               medical professional. Further investigations
               or treatment depend on clinical findings.
             </p>
